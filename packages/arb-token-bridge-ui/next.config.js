@@ -5,7 +5,6 @@
  **/
 
 module.exports = {
-  basePath: '/arbitrum-token-bridge',
   output: 'export',
   images: {
     unoptimized: true
