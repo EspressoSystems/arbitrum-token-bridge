@@ -285,7 +285,7 @@ export const defaultL2Network: ArbitrumNetwork = {
     outbox: '0x50143333b44Ea46255BEb67255C9Afd35551072F',
     rollup: process.env.NEXT_PUBLIC_IS_E2E_TEST
       ? '0xE8A8F50F2a237D06D0087D14E690f6Ff0556259D'
-      : '0x46966d871d29e1772c2809459469f849d8AAb1A3',
+      : '0x9E7027f19AE93681f5A2cb2d87841a7e1E3Cdbe7',
     sequencerInbox: '0x18d19C5d3E685f5be5b9C86E097f0E439285D216'
   },
   isCustom: true,
