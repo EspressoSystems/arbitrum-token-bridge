@@ -1,0 +1,31 @@
+name: Deploy frontend to github pages
+on:
+  push:
+    branches:
+      - "integration"
+      - "release-*"
+  pull_request:
+  schedule:
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+
+jobs:
+  doc:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: |
+          yarn
+          yarn build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        # TODO uncomment below
+        # if: ${{ github.ref == 'refs/heads/integration' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./packages/arb-token-bridge-ui/build
+          # cname: arbitrum-bridge.cappuccino.testnet.espresso.network
