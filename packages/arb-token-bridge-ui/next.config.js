@@ -5,10 +5,6 @@
  **/
 
 module.exports = {
-  output: 'export',
-  images: {
-    unoptimized: true
-  },
   distDir: 'build',
   productionBrowserSourceMaps: true,
   reactStrictMode: true,

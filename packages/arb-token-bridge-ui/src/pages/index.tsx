@@ -77,49 +77,49 @@ function addOrbitChainsToArbitrumSDK() {
   )
 }
 
-// export function getServerSideProps({
-//   query
-// }: GetServerSidePropsContext): GetServerSidePropsResult<Record<string, never>> {
-//   const sourceChainId = decodeChainQueryParam(query.sourceChain)
-//   const destinationChainId = decodeChainQueryParam(query.destinationChain)
+export function getServerSideProps({
+  query
+}: GetServerSidePropsContext): GetServerSidePropsResult<Record<string, never>> {
+  const sourceChainId = decodeChainQueryParam(query.sourceChain)
+  const destinationChainId = decodeChainQueryParam(query.destinationChain)
 
-//   // If both sourceChain and destinationChain are not present, let the client sync with Metamask
-//   if (!sourceChainId && !destinationChainId) {
-//     return {
-//       props: {}
-//     }
-//   }
+  // If both sourceChain and destinationChain are not present, let the client sync with Metamask
+  if (!sourceChainId && !destinationChainId) {
+    return {
+      props: {}
+    }
+  }
 
-//   // it's necessary to call this before sanitization to make sure all chains are registered
-//   addOrbitChainsToArbitrumSDK()
+  // it's necessary to call this before sanitization to make sure all chains are registered
+  addOrbitChainsToArbitrumSDK()
 
-//   // sanitize the query params
-//   const sanitized = sanitizeQueryParams({ sourceChainId, destinationChainId })
+  // sanitize the query params
+  const sanitized = sanitizeQueryParams({ sourceChainId, destinationChainId })
 
-//   // if the sanitized query params are different from the initial values, redirect to the url with sanitized query params
-//   if (
-//     sourceChainId !== sanitized.sourceChainId ||
-//     destinationChainId !== sanitized.destinationChainId
-//   ) {
-//     console.log(`[getServerSideProps] sanitizing query params`)
-//     console.log(
-//       `[getServerSideProps]     sourceChain=${sourceChainId}&destinationChain=${destinationChainId} (before)`
-//     )
-//     console.log(
-//       `[getServerSideProps]     sourceChain=${sanitized.sourceChainId}&destinationChain=${sanitized.destinationChainId} (after)`
-//     )
-//     return {
-//       redirect: {
-//         permanent: false,
-//         destination: getDestinationWithSanitizedQueryParams(sanitized, query)
-//       }
-//     }
-//   }
+  // if the sanitized query params are different from the initial values, redirect to the url with sanitized query params
+  if (
+    sourceChainId !== sanitized.sourceChainId ||
+    destinationChainId !== sanitized.destinationChainId
+  ) {
+    console.log(`[getServerSideProps] sanitizing query params`)
+    console.log(
+      `[getServerSideProps]     sourceChain=${sourceChainId}&destinationChain=${destinationChainId} (before)`
+    )
+    console.log(
+      `[getServerSideProps]     sourceChain=${sanitized.sourceChainId}&destinationChain=${sanitized.destinationChainId} (after)`
+    )
+    return {
+      redirect: {
+        permanent: false,
+        destination: getDestinationWithSanitizedQueryParams(sanitized, query)
+      }
+    }
+  }
 
-//   return {
-//     props: {}
-//   }
-// }
+  return {
+    props: {}
+  }
+}
 
 export default function Index() {
   useEffect(() => {
