@@ -26,6 +26,7 @@ jobs:
           yarn build
         env:
           NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID }}
+          NEXT_PUBLIC_SEPOLIA_RPC_URL: https://ethereum-sepolia-rpc.publicnode.com
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
