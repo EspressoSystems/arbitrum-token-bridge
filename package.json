@@ -22,7 +22,8 @@
   "resolutions": {
     "**/@walletconnect/ethereum-provider": "2.13.1",
     "**/@ethersproject/providers/ws": "7.5.10",
-    "**/@synthetixio/synpress/ws": "8.17.1"
+    "**/@synthetixio/synpress/ws": "8.17.1",
+    "**/@arbitrum/sdk": "https://github.com/EspressoSystems/arbitrum-sdk/releases/download/v5.0.0-pre/espressosystems-arbitrum-sdk-v4.0.1.tgz"
   },
   "keywords": [],
   "author": "",

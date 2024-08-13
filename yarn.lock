@@ -44,10 +44,9 @@
     tslib "^2.3.0"
     zen-observable-ts "^1.2.5"
 
-"@arbitrum/sdk@^4.0.1":
+"@arbitrum/sdk@^4.0.1", "@arbitrum/sdk@https://github.com/EspressoSystems/arbitrum-sdk/releases/download/v5.0.0-pre/espressosystems-arbitrum-sdk-v4.0.1.tgz":
   version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@arbitrum/sdk/-/sdk-4.0.1.tgz#b51c7bb8ecef0143a35b7f3ab8538031bb1830d2"
-  integrity sha512-uW0Pe/oICbmlHpIpYOaHHWsNQRG+3UbCa3s0SJsp2O1Kt9b0M0CX/fEdFOFLyAi3OxHonNEfzhfvQrALy9C3Yw==
+  resolved "https://github.com/EspressoSystems/arbitrum-sdk/releases/download/v5.0.0-pre/espressosystems-arbitrum-sdk-v4.0.1.tgz#42eb09129d1deab205e235be0c7dd7a19ce29418"
   dependencies:
     "@ethersproject/address" "^5.0.8"
     "@ethersproject/bignumber" "^5.1.1"
