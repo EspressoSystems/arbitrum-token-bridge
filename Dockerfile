@@ -1,9 +1,9 @@
 FROM --platform=$BUILDPLATFORM node:20-alpine AS base
 
+FROM base AS builder
+
 ARG NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID
 ARG NEXT_PUBLIC_SEPOLIA_RPC_URL=https://ethereum-sepolia-rpc.publicnode.com
-
-FROM base AS builder
 
 # TODO REMOVE DEBUG
 RUN sh -c "env | grep NEXT_" && exit 1
