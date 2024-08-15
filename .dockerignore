@@ -1,0 +1,9 @@
+Dockerfile
+
+node_modules
+yarn-error.log
+.idea
+.DS_Store
+tsconfig.tsbuildinfo
+__auto-generated-denylist.json
+
