@@ -49,4 +49,4 @@ jobs:
           tags: ${{ steps.meta.outputs.tags  }}
           labels: ${{ steps.meta.outputs.labels  }}
           build-args: |
-            NEXT_PUBLIC_WALLETCONNET_PROJECT_ID=${{ vars.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID }}
+            NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=${{ vars.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID }}
