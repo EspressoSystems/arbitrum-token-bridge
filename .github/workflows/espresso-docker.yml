@@ -44,8 +44,6 @@ jobs:
       - name: Build and Push Docker
         uses: docker/build-push-action@v6
         with:
-          context: .
-          file: ./docker/block-explorer.Dockerfile
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request'  }}
           tags: ${{ steps.meta.outputs.tags  }}
