@@ -24,4 +24,4 @@ COPY --from=builder /app/packages/arb-token-bridge-ui/public ./packages/arb-toke
 COPY --from=builder /app/packages/arb-token-bridge-ui/build/static ./packages/arb-token-bridge-ui/build/static
 
 # NOTE: set HOSTNAME=0.0.0.0 to listen on all interfaces, and PORT to change port
-CMD ["nodejs", "packages/arb-token-bridge-ui/server.js"]
+CMD ["node", "packages/arb-token-bridge-ui/server.js"]
